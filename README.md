@@ -34,6 +34,4 @@ In this project, I practiced building an ETL pipeline to process crowdfunding da
 - Jupyter Notebook
 - Excel
 
-## License
 
-This project is licensed under the MIT License.
