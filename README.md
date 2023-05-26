@@ -8,7 +8,9 @@ Team Members:
 
 ## Background
 
-In this project, I practiced building an ETL pipeline to process crowdfunding data from Excel files. I extracted and transformed the data, created four CSV files, and then used the CSV files to create an Entity Relationship Diagram (ERD) and a table schema. Finally, I loaded the CSV files into a PostgreSQL database.
+In this project, we practiced building an ETL pipeline to process crowdfunding data from Excel files. We extracted and transformed the data, created four CSV files, and then used the CSV files to create an Entity Relationship Diagram (ERD) and a table schema. Finally, We loaded the CSV files into a PostgreSQL database.
+
+![ERD Diagram](Diagram%20Crowdfunding.png)
 
 ## Features
 
@@ -20,7 +22,7 @@ In this project, I practiced building an ETL pipeline to process crowdfunding da
 ## Installation
 
 1. Clone the repository.
-2. Install required Python packages: `pandas`, `openpyxl`, and `psycopg2`.
+2. Install required Python packages: `pandas` and `openpyxl`.
 3. Set up a PostgreSQL server and create a new database called `crowdfunding_db`.
 
 ## Usage
@@ -37,5 +39,3 @@ In this project, I practiced building an ETL pipeline to process crowdfunding da
 - PostgreSQL
 - Jupyter Notebook
 - Excel
-
-
