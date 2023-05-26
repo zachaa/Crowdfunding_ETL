@@ -1,7 +1,7 @@
-DROP TABLE campaign if EXISTS;  -- Must be dropped first due to foreign keys
-DROP TABLE contacts IF EXISTS;
-DROP TABLE category IF EXISTS;
-DROP TABLE subcategory IF EXISTS;
+DROP TABLE IF EXISTS campaign;  -- Must be dropped first due to foreign keys
+DROP TABLE IF EXISTS contacts;
+DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS subcategory;
 
 CREATE TABLE contacts (
     contact_id INTEGER PRIMARY KEY,
@@ -25,17 +25,23 @@ CREATE TABLE campaign (
     contact_id INTEGER NOT NULL,
     company_name TEXT NOT NULL,
     description TEXT NOT NULL,
-    goal INTEGER NOT NULL,
-    pledged INTEGER NOT NULL,
+    goal DOUBLE PRECISION NOT NULL,
+    pledged DOUBLE PRECISION NOT NULL,
     outcome TEXT NOT NULL,
     backers_count INTEGER NOT NULL,
-    country VARCHAR(2)
-    currency VARCHAR(3)
+    country VARCHAR(2),
+    currency VARCHAR(3),
     launched_date DATE NOT NULL,
     end_date DATE NOT NULL,
     category_id TEXT NOT NULL,
     subcategory_id TEXT NOT NULL,
-    FOREIGN KEY (contact_id) REFERENCES (contacts.contact_id),
-    FOREIGN KEY (category_id) REFERENCES (category.category_id),
-    FOREIGN KEY (subcategory_id) REFERENCES (subcategory.subcategory_id)
+    FOREIGN KEY (contact_id) REFERENCES contacts(contact_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id),
+    FOREIGN KEY (subcategory_id) REFERENCES subcategory(subcategory_id)
 );
+
+-- Select statements
+SELECT * FROM contacts;
+SELECT * FROM category;
+SELECT * FROM subcategory;
+SELECT * FROM campaign;
